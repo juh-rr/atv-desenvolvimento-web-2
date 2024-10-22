@@ -22,8 +22,25 @@ const handleInput = (event) => {
 
 const salvar = () => {
     console.log(dados)
+    const cadastros = JSON.parse(localStorage.getItem("cadastros")) || []
+    cadastros.push(dados)
+    localStorage.setItem("cadastros", JSON.stringify(cadastros))
+    alert("Cadastro de vaga realizado com sucesso.")
 }
 
+const limpar = () => {
+    setDados (
+        {
+            nome: "",
+            placa: "",
+            modelo: "",
+            cor: "",
+            apto: "",
+            bloco: "",
+            vaga: ""
+        }
+    )
+}
 
     return (
         <div className="formulario">
@@ -32,7 +49,8 @@ const salvar = () => {
                          preenchimento="Digite o seu nome"  
                          valor={dados.nome} 
                          handleInput={handleInput}
-                         name="nome"/>
+                         nome="nome"
+                         classe="margens"/>
 
 
             <CustomInput label="Placa do veículo"
@@ -40,45 +58,51 @@ const salvar = () => {
                          preenchimento="DDD0D00"  
                          valor={dados.placa} 
                          handleInput={handleInput}
-                         name="placa"/>  
+                         nome="placa"
+                         classe="margens"/>  
     
             <CustomInput label="Modelo do veículo"
                          tipo="text"
                          preenchimento="Uno"  
                          valor={dados.modelo} 
                          handleInput={handleInput}
-                         name="modelo"/> 
+                         nome="modelo"
+                         classe="margens"/> 
 
             <CustomInput label="Cor do veículo"
                          tipo="text"
                          preenchimento="Branco"  
                          valor={dados.cor} 
                          handleInput={handleInput}
-                         name="cor"/>
+                         nome="cor"
+                         classe="margens"/>
             
             <CustomInput label="Número do apartamento"
                          tipo="text"
                          preenchimento="01"  
                          valor={dados.apto} 
                          handleInput={handleInput}
-                         name="apto"/>
+                         nome="apto"
+                         classe="margens"/>
             
             <CustomInput label="Bloco do apartamento"
                          tipo="text"
                          preenchimento="A"  
                          valor={dados.bloco} 
                          handleInput={handleInput}
-                         name="bloco"/>
+                         nome="bloco"
+                         classe="margens"/>
     
             <CustomInput label="Número da vaga de estacionamento"
                          tipo="text"
                          preenchimento="10"  
                          valor={dados.vaga} 
                          handleInput={handleInput}
-                         name="vaga"/>
+                         nome="vaga"
+                         classe="margens"/>
 
             <button onClick={salvar}>Salvar</button>
-            <button>Limpar</button>
+            <button onClick={limpar}>Limpar</button>
 
         </div>
     )

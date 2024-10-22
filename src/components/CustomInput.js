@@ -6,9 +6,9 @@ function CustomInput(props) {
             <label className={props.classe}>{props.label}</label>
             <input className={props.classe} type={props.tipo} 
             placeholder={props.preenchimento}
-            value ={props.valor} 
+            valor ={props.valor} 
             onChange={props.handleInput} 
-            name={props.nome}/>
+            nome={props.nome}/>
         </div>
     )
 }

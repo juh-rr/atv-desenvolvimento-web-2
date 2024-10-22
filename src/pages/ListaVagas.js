@@ -12,7 +12,7 @@ function ListaVagas() {
     }
 
     useEffect(() => {
-        carregarVagas()
+carregarVagas()
         window.addEventListener("atualizacaovagas", carregarVagas)
         return () => {
             window.removeEventListener("atualizacaovagas", carregarVagas)

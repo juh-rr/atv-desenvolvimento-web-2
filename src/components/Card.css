@@ -1,0 +1,10 @@
+.background {
+    background-color: lightblue;
+    color: black;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 30%;
+    display: inline-block;
+}

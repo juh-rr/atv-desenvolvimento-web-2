@@ -26,6 +26,7 @@ const salvar = () => {
     cadastros.push(dados)
     localStorage.setItem("cadastros", JSON.stringify(cadastros))
     alert("Cadastro de vaga realizado com sucesso.")
+    limpar()
 }
 
 const limpar = () => {

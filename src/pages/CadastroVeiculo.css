@@ -4,11 +4,12 @@
 
 .formulario label {
     font-weight: bold;
+    color: darkgreen
     
 }
 
 .formulario input {
-    background-color: lightblue;
+    background-color: darkgrey;
     padding: 5px;
     border: 1px solid black;
     
@@ -21,6 +22,11 @@
     margin-bottom: 10px;
     margin-left: 5px;
     margin-right: 5px;
+    border-radius: 5px;
+}
+
+.formulario button:hover{
+    background-color: gray;
 }
 
 .margens {

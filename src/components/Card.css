@@ -1,5 +1,5 @@
 .background {
-    background-color: lightblue;
+    background-color: #677B98;
     color: black;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -7,4 +7,18 @@
     margin-right: 1%;
     width: 30%;
     display: inline-block;
+}
+
+.botoes button {
+    width: 100px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.botoes button:hover{
+    background-color: gray;
 }

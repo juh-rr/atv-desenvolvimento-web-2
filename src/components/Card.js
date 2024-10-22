@@ -14,12 +14,10 @@ function Card(props) {
     return (
         <div className= "background">
             <h3 className="nomePessoa">{props.cadastro.nome}</h3>
-            <p className="content">{props.cadastro.placa}</p>
-            <p className="content">{props.cadastro.modelo}</p>
-            <p className="content">{props.cadastro.cor}</p>
-            <p className="content">{props.cadastro.apto}</p>
-            <p className="content">{props.cadastro.bloco}</p>
-            <p className="content">{props.cadastro.vaga}</p>
+            <p className="content">Placa: {props.cadastro.placa}</p>
+            <p className="content">Carro: {props.cadastro.modelo} {props.cadastro.cor}</p>
+            <p className="content">Apartamento: {props.cadastro.apto} {props.cadastro.bloco}</p>
+            <p className="content">Vaga: {props.cadastro.vaga}</p>
                 <div class="botoes">
                     <button>Editar</button>
                     <button onClick={excluir}>Excluir</button>
